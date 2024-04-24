@@ -120,6 +120,7 @@ struct ForestView: View {
                         .background(Color(hex: "#1C1C1E"))
                         .cornerRadius(12.0)
                         
+                        
 //                        HStack {
                            
                             
@@ -143,7 +144,7 @@ struct ForestView: View {
 
             }
             
-        }.border(.black)
+        }
     }
 }
 
