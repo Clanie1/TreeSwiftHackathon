@@ -8,7 +8,7 @@ struct Navigation: View {
         TabView {
             FriendsView().tabItem {Label("Social", systemImage: "person")}
             ForestView().tabItem{Label("Mi Parque", systemImage: "house")}.background(Color(hex: "#87AFEC"))
-            ActividadView().tabItem{
+            RegistroConsumoView().tabItem{
                 Label("Actividad", systemImage: "square.and.arrow.up")
             }
             MapView().tabItem { Label("Mapa", systemImage: "map") }

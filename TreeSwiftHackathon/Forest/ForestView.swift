@@ -10,6 +10,7 @@ struct ForestView: View {
     
     var body: some View {
         NavigationView{
+            
             VStack {
                 
                 VStack(spacing: 2) {
@@ -120,31 +121,11 @@ struct ForestView: View {
                             .foregroundColor(Color(hex: "#F9C700"))
                             .background(Color(hex: "#1C1C1E"))
                             .cornerRadius(12.0)
-                            
-                            
-                            //                        HStack {
-                            
-                            
-                            //                            Button("Agregar Recibo") {
-                            //                                self.isBuilding = true
-                            //                            }
-                            //                            .padding(.top, 7)
-                            //                            .padding(.leading, 14)
-                            //                            .padding(.bottom, 7)
-                            //                            .padding(.trailing, 14)
-                            //                            .background(Color(hex: "#F9C700"))
-                            //                            .foregroundColor(.black)
-                            //                            .cornerRadius(40.0)
-                            
-                            
-                            //                        }
-                            
                         }
                         Spacer()
                     }
-                    
                 }
-            }
+            }.background(Color(hex:"#87AFEC"))
         }
     }
 }
