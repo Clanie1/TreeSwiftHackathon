@@ -78,7 +78,7 @@
 		F13426C42BD8ADE2007BA404 /* ActividadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActividadView.swift; sourceTree = "<group>"; };
 		F19699A22BD8BC61002E73E1 /* FriendProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileView.swift; sourceTree = "<group>"; };
 		F19699AA2BD8DD2D002E73E1 /* BarProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarProgressStyle.swift; sourceTree = "<group>"; };
-		F1B7D1D92BD89D38008B4E1F /* TreeSwiftHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeSwiftHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B7D1D92BD89D38008B4E1F /* RegioPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegioPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B7D1DC2BD89D38008B4E1F /* TreeSwiftHackathonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSwiftHackathonApp.swift; sourceTree = "<group>"; };
 		F1B7D1DE2BD89D38008B4E1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1B7D1E02BD89D39008B4E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		F1B7D1DA2BD89D38008B4E1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1B7D1D92BD89D38008B4E1F /* TreeSwiftHackathon.app */,
+				F1B7D1D92BD89D38008B4E1F /* RegioPark.app */,
 				F1B7D1E92BD89D39008B4E1F /* TreeSwiftHackathonTests.xctest */,
 				F1B7D1F32BD89D39008B4E1F /* TreeSwiftHackathonUITests.xctest */,
 			);
@@ -272,7 +272,7 @@
 				6A177AFC2BD95C41001235CB /* Supabase */,
 			);
 			productName = TreeSwiftHackathon;
-			productReference = F1B7D1D92BD89D38008B4E1F /* TreeSwiftHackathon.app */;
+			productReference = F1B7D1D92BD89D38008B4E1F /* RegioPark.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F1B7D1E82BD89D39008B4E1F /* TreeSwiftHackathonTests */ = {
@@ -588,7 +588,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RegioPark;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -618,7 +618,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RegioPark;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

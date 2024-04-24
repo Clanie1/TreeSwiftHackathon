@@ -22,15 +22,16 @@ struct FriendsView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                HStack(){
-                    Text("Amigos").font(.title).fontWeight(.bold).foregroundStyle(Color.white)
-                }
+                HStack {
+                    Text("Amigos").bold().font(.title).foregroundColor(.white)
+                    Spacer()
+                }.padding()
                 
                 ScrollView{
                     VStack(spacing:10){
                         TextField("User name", text: $search).disableAutocorrection(true).onSubmit {
                             print(search)
-                        }
+                        }.font(.system(size: 12))
                         .padding()
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))                        .cornerRadius(5).padding(.bottom, 20)
                         
@@ -40,7 +41,7 @@ struct FriendsView: View {
                         }
                         
                     }.padding()
-                }.border(Color.gray)
+                }
             }.background(Color(hex:"#87AFEC"))    }.onAppear {
                 Task {
                     if let url = URL(string: "https://mbvodwyplawoqehzwfld.supabase.co/rest/v1/user?select=*") {
@@ -53,6 +54,7 @@ struct FriendsView: View {
                                 do {
                                     let friendDataLocal = try JSONDecoder().decode([FriendData].self, from: data)
                                     friendData = friendDataLocal
+                                    print(friendData)
                                     
                                     
                                 } catch {

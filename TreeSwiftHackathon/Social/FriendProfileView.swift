@@ -34,7 +34,7 @@ struct FriendProfileView: View {
                 HStack{
                     Text("@" + username).font(.subheadline).fontWeight(.medium).foregroundColor(.white)
                     Text("*")
-                    Text(createdAt).font(.subheadline).fontWeight(.medium)
+                    Text(toDateText(isoString: createdAt)).font(.subheadline).fontWeight(.medium)
                     Spacer()
                 }
             
