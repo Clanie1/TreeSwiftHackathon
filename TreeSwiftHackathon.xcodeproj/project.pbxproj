@@ -23,6 +23,7 @@
 		6A177AFB2BD95C41001235CB /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 6A177AFA2BD95C41001235CB /* Storage */; };
 		6A177AFD2BD95C41001235CB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6A177AFC2BD95C41001235CB /* Supabase */; };
 		6A177AFF2BD95C51001235CB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A177AFE2BD95C51001235CB /* Supabase.swift */; };
+		6A177B022BD986BC001235CB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A177B012BD986BC001235CB /* Location.swift */; };
 		6A3654102BD8C6EA00199609 /* StatsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36540F2BD8C6EA00199609 /* StatsBar.swift */; };
 		6A3654132BD8E02600199609 /* ScanCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3654122BD8E02600199609 /* ScanCategories.swift */; };
 		F12B406A2BD974AB00FEB4A9 /* RegistroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B40692BD974AB00FEB4A9 /* RegistroView.swift */; };
@@ -66,6 +67,7 @@
 		6A0868EF2BD8A6AA007D899F /* FriendComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendComponent.swift; sourceTree = "<group>"; };
 		6A0868F42BD8A6EF007D899F /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		6A177AFE2BD95C51001235CB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		6A177B012BD986BC001235CB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6A36540F2BD8C6EA00199609 /* StatsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBar.swift; sourceTree = "<group>"; };
 		6A3654122BD8E02600199609 /* ScanCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCategories.swift; sourceTree = "<group>"; };
 		F12B40692BD974AB00FEB4A9 /* RegistroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,12 @@
 				F12B406B2BD97A6700FEB4A9 /* RegistroProgressView.swift */,
 			);
 			path = Registro;
+		6A177B002BD986B3001235CB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				6A177B012BD986BC001235CB /* Location.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		F13426C32BD8ADC9007BA404 /* Actividad */ = {
@@ -183,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F12B40682BD9748E00FEB4A9 /* Registro */,
+				6A177B002BD986B3001235CB /* Location */,
 				F13426C32BD8ADC9007BA404 /* Actividad */,
 				6A0868EE2BD8A69F007D899F /* Social */,
 				6A0868E32BD8A63F007D899F /* Forest */,
@@ -369,6 +378,7 @@
 				F19699A32BD8BC61002E73E1 /* FriendProfileView.swift in Sources */,
 				6A0868E72BD8A671007D899F /* CoinView.swift in Sources */,
 				6A0868E52BD8A664007D899F /* BuildButtons.swift in Sources */,
+				6A177B022BD986BC001235CB /* Location.swift in Sources */,
 				6A0868F02BD8A6AA007D899F /* FriendComponent.swift in Sources */,
 				F12B406C2BD97A6700FEB4A9 /* RegistroProgressView.swift in Sources */,
 				6A0868ED2BD8A696007D899F /* Tile.swift in Sources */,
@@ -545,7 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TreeSwiftHackathon/Preview Content\"";
-				DEVELOPMENT_TEAM = 6AFUHTK7G3;
+				DEVELOPMENT_TEAM = YTY63YK734;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -559,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathon;
+				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonMau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -575,7 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TreeSwiftHackathon/Preview Content\"";
-				DEVELOPMENT_TEAM = 6AFUHTK7G3;
+				DEVELOPMENT_TEAM = YTY63YK734;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -589,7 +599,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathon;
+				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonMau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -604,7 +614,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6AFUHTK7G3;
+				DEVELOPMENT_TEAM = YTY63YK734;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -624,7 +634,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6AFUHTK7G3;
+				DEVELOPMENT_TEAM = YTY63YK734;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -643,10 +653,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6AFUHTK7G3;
+				DEVELOPMENT_TEAM = YTY63YK734;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonUITestsMau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -661,10 +671,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6AFUHTK7G3;
+				DEVELOPMENT_TEAM = YTY63YK734;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonUITestsMau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

@@ -76,7 +76,7 @@ struct TileView: View {
 
             case .none:
                 ZStack {
-
+//                    Image("ADead").resizable().scaledToFit().clipShape(Rectangle()).frame(width: gridSideLength, height: gridSideLength)
                     Rectangle()
                         .fill(Color.white)
                         .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)

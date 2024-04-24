@@ -1,5 +1,16 @@
 import SwiftUI
 
+func toDateString(isoString: String) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    if let date = dateFormatter.date(from: isoString) {
+        dateFormatter.dateFormat = "MMMM yyyy"
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+    return isoString
+}
+
 
 struct FriendComponent: View {
     
@@ -10,6 +21,8 @@ struct FriendComponent: View {
     @State var username: String
     @State var createdAt: String
     @State var fullName: String
+    
+   
     
     var body: some View {
         NavigationLink(destination: FriendProfileView(userId: userId, username: username, createdAt: createdAt, fullName: fullName)) {
@@ -25,7 +38,7 @@ struct FriendComponent: View {
                     .font(.system(size: 20))
                     VStack (alignment:.leading, spacing: 0){
                         Text(fullName).foregroundStyle(Color.white).font(.title2).fontWeight(.bold)
-                        Text("Desde " + String(createdAt)).foregroundStyle(Color.black)
+                        Text("Desde " + toDateString(isoString: createdAt)).foregroundStyle(Color.black)
                     }.padding(.leading, 10)
                     Spacer()
                     Image("Right").resizable().scaledToFit()
