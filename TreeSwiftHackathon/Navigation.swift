@@ -1,5 +1,26 @@
 import SwiftUI
 
+
+func notify(title: String, subtitle: String) {
+    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+        if success {
+            print("All set")
+        }
+        else {
+            print(error?.localizedDescription)
+        }
+    }
+    
+    let content = UNMutableNotificationContent()
+    content.title = title
+    content.subtitle = subtitle
+    content.sound = UNNotificationSound.default
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request)
+}
 struct Navigation: View {
     
     @State private var selectedTabindex = 0

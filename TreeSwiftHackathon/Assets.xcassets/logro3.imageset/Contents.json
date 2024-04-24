@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "WhatsApp Apr 23 Image.jpeg",
-      "idiom" : "universal"
+      "filename" : "logro3.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

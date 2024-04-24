@@ -22,7 +22,11 @@ struct ActividadView: View {
             VStack(alignment:.center){
                 Text("Actividad").font(.title).fontWeight(.bold).foregroundStyle(Color.white)
                 HStack{
-                    Text("1 Mar - 31 Mar 2024").font(.subheadline).foregroundStyle(Color.white)
+                    Button(action: {
+                        notify(title: "Mejoras de Patio", subtitle: "Daniel Barocio ha mejorado su Patio")
+                    }) {
+                        Text("1 Mar - 31 Mar 2024").font(.subheadline).foregroundStyle(Color.white)
+                    }
                 }.frame(height: 20)
                 ZStack{
                     
