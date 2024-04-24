@@ -75,10 +75,21 @@ struct TileView: View {
                 }
 
             case .none:
-                Rectangle()
-                    .fill(Color.white)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
-                    .frame(width: gridSideLength, height: gridSideLength)
+                ZStack {
+
+                    Rectangle()
+                        .fill(Color.white)
+                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                        .frame(width: gridSideLength, height: gridSideLength)
+                    
+                    Rectangle()
+                        .fill(Color.green)
+                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                        .frame(width: gridSideLength / 2, height: gridSideLength / 2)
+                        .rotation3DEffect(
+                            .degrees(80),
+                            axis: (x: 1.0, y: 0.0, z: 0.0))
+                }
             }
         }
     }
