@@ -48,21 +48,21 @@ struct TileView: View {
                 ZStack {
                     Rectangle()
                         .fill(Color.green)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
             case .house:
                 ZStack {
                     Rectangle()
                         .fill(Color.orange)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
             case .tree:
                 ZStack {
                     Rectangle()
                         .fill(Color.yellow)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
 
                 }
@@ -70,7 +70,7 @@ struct TileView: View {
                 ZStack {
                     Rectangle()
                         .fill(Color.yellow)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
 
@@ -80,15 +80,8 @@ struct TileView: View {
                     Rectangle()
                         .fill(Color.white)
                         .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
-                        .frame(width: gridSideLength, height: gridSideLength)
-                    
-                    Rectangle()
-                        .fill(Color.green)
-                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
-                        .frame(width: gridSideLength / 2, height: gridSideLength / 2)
-                        .rotation3DEffect(
-                            .degrees(80),
-                            axis: (x: 1.0, y: 0.0, z: 0.0))
+                        .frame(width: .infinity, height: gridSideLength)
+                
                 }
             }
         }

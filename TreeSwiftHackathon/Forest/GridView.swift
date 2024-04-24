@@ -12,11 +12,11 @@ struct GridView: View {
     @Binding var selectedItem: ItemType
     @Binding var coins: Int
     
-    let gridSideLength = (UIScreen.main.bounds.size.width - 60) / 5
+    let gridSideLength = 30.0
     
     var body: some View {
         VStack {
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 5), spacing: 0) {
+            LazyVGrid(columns: Array(repeating: GridItem(spacing: 0), count: 5), spacing: 0) {
                 ForEach(0..<25, id: \.self) { index in
                     TileView(tileData: $grid[index/5][index%5], selectedItem: $selectedItem, coins: $coins, gridSideLength:  gridSideLength)
                 }
@@ -28,3 +28,10 @@ struct GridView: View {
     }
 }
 
+#Preview {
+    @State var selectedItem: ItemType = .none
+    @State var coins: Int = 10000
+    @State var isBuilding: Bool = false
+
+    return GridView(selectedItem: $selectedItem, coins: $coins)
+}
