@@ -12,13 +12,13 @@ struct GridView: View {
     @Binding var selectedItem: ItemType
     @Binding var coins: Int
     
+    let gridSideLength = (UIScreen.main.bounds.size.width - 20) / 10
+    
     var body: some View {
-        GeometryReader { geometry in
-            let gridSideLength = min(geometry.size.width, geometry.size.height) / 10
-            let spacing = (geometry.size.width - (gridSideLength * 10)) / 2
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 10), spacing: spacing) {
+        VStack {
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 10), spacing: 0) {
                 ForEach(0..<100, id: \.self) { index in
-                    TileView(tileData: $grid[index/10][index%10], selectedItem: $selectedItem, coins: $coins, gridSideLength: gridSideLength)
+                    TileView(tileData: $grid[index/10][index%10], selectedItem: $selectedItem, coins: $coins, gridSideLength:  gridSideLength)
                 }
             }
         }
