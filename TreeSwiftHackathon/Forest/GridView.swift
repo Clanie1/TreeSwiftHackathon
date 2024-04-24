@@ -32,6 +32,8 @@ struct GridView: View {
     @Binding var selectedItem: ItemType
     @Binding var coins: Int
     
+    @State var alreadyFetched = false
+    
     let gridSideLength = 30.0
     
     func onAppear() {
@@ -56,6 +58,9 @@ struct GridView: View {
                 )
             }
         }.onAppear {
+            if alreadyFetched {
+                return
+            }
             Task {
                 if let url = URL(string: "https://mbvodwyplawoqehzwfld.supabase.co/rest/v1/grid?user_id=eq.\(userId)&select=%2A") {
                     var request = URLRequest(url: url)
@@ -74,6 +79,7 @@ struct GridView: View {
                             }
                         }
                     }.resume()
+                    alreadyFetched = true
                 }
 
                }
