@@ -37,6 +37,7 @@
 		F1B7D1EE2BD89D39008B4E1F /* TreeSwiftHackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7D1ED2BD89D39008B4E1F /* TreeSwiftHackathonTests.swift */; };
 		F1B7D1F82BD89D39008B4E1F /* TreeSwiftHackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7D1F72BD89D39008B4E1F /* TreeSwiftHackathonUITests.swift */; };
 		F1B7D1FA2BD89D39008B4E1F /* TreeSwiftHackathonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7D1F92BD89D39008B4E1F /* TreeSwiftHackathonUITestsLaunchTests.swift */; };
+		F1F2AAE22BD9AFA900464677 /* RegistroConsumoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2AAE12BD9AFA900464677 /* RegistroConsumoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		F1B7D1F32BD89D39008B4E1F /* TreeSwiftHackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreeSwiftHackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B7D1F72BD89D39008B4E1F /* TreeSwiftHackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSwiftHackathonUITests.swift; sourceTree = "<group>"; };
 		F1B7D1F92BD89D39008B4E1F /* TreeSwiftHackathonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSwiftHackathonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F1F2AAE12BD9AFA900464677 /* RegistroConsumoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroConsumoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 		F1F2AAE02BD9AF4400464677 /* RegistroConsumo */ = {
 			isa = PBXGroup;
 			children = (
+				F1F2AAE12BD9AFA900464677 /* RegistroConsumoView.swift */,
 			);
 			path = RegistroConsumo;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				F1B7D1DD2BD89D38008B4E1F /* TreeSwiftHackathonApp.swift in Sources */,
 				6A177AFF2BD95C51001235CB /* Supabase.swift in Sources */,
 				F19699AB2BD8DD2D002E73E1 /* BarProgressStyle.swift in Sources */,
+				F1F2AAE22BD9AFA900464677 /* RegistroConsumoView.swift in Sources */,
 				F13426C52BD8ADE2007BA404 /* ActividadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
