@@ -28,6 +28,14 @@ struct FormDeRegistroConsumoView: View {
         
     }
     
+    @State private var inputLuz: String = "0.0"
+
+    var registroTotalLuz: CGFloat {
+        return ((CGFloat(Float(inputLuz) ?? 0.0) * 0.00056 * 1000) * 100).rounded() / 100
+    }
+    
+    
+    
     var body: some View {
         VStack(alignment:.leading){
             HStack{
@@ -92,7 +100,7 @@ struct FormDeRegistroConsumoView: View {
                 }.padding()
                 HStack{
                     Text("Consumo   ").padding()
-                    TextField("kWh", text: $amount)
+                    TextField("kWh", text: $inputLuz)
                             .padding()
                             .font(.title) // Sets the font to "Title" style
                             .foregroundColor(.blue) // Sets the text color to blue
@@ -107,7 +115,7 @@ struct FormDeRegistroConsumoView: View {
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text("12,2 CO2e").foregroundStyle(.green).fontWeight(.bold)
+                    Text(String(describing: registroTotalLuz) + " kgCO2").foregroundStyle(.green).fontWeight(.bold)
                 }.padding()
                 Button(action:imprimir ) {
                       Text("Register")

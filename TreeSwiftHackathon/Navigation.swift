@@ -48,7 +48,7 @@ struct Navigation: View {
     @State var offsetTotal: String = "20,3 CO2e"
 
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTabindex) {
             FriendsView().tabItem {Label("Social", systemImage: "person")}
             ForestView(historicData: historicData, mes: mes, mesMessage: mesMessagae, mesPasadoValue: mesPasado, offsetTotalValue: offsetTotal).tabItem{Label("Mi Parque", systemImage: "house")}.background(Color(hex: "#87AFEC"))
             RegistroConsumoView().tabItem{
@@ -58,6 +58,7 @@ struct Navigation: View {
             
         }.onAppear() {
             UITabBar.appearance().backgroundColor = UIColor(Color(hex: "#1C1C1E"))
+            selectedTabindex = 1
         }.tint(.white)
         
     }
