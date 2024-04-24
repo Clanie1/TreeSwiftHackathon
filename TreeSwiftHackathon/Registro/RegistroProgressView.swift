@@ -12,7 +12,7 @@ struct RegistroProgressView: View {
     
     var body: some View {
         HStack{
-            ForEach(1...4, id: \.self) { index in
+            ForEach(1...3, id: \.self) { index in
                 Circle()
                     .fill(index <= step ? Color(hex: "#F9C701") : Color.white)
                     .frame(width: 20, height: 20)
