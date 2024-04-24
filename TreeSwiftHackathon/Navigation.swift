@@ -4,7 +4,7 @@ struct Navigation: View {
     var body: some View {
         TabView {
             FriendsView().tabItem {Label("Social", systemImage: "person")}
-            ForestView().tabItem{Label("Mi Parque", systemImage: "house")}
+            ForestView().tabItem{Label("Mi Parque", systemImage: "house")}.background(Color(hex: "#87AFEC"))
             ActividadView().tabItem{
                 Label("Actividad", systemImage: "square.and.arrow.up")
             }
