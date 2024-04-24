@@ -4,12 +4,13 @@ struct Navigation: View {
     var body: some View {
                 TabView {
                     NavigationView {
-                        ForestView().navigationTitle("Home")
-                            .accentColor(Color.white)
+                        ForestView().navigationTitle("Mi Parque")
+                            .navigationBarTitleTextColor(.white)
                             .background(Color(hex: "#87AFEC"))
                     }.tabItem {
                         Image(systemName: "house")
-                        Text("Home")
+                        Text("Mi Parque")
+                        
                     }
                     NavigationView {
                         FriendsView().navigationTitle("Social")
@@ -17,7 +18,9 @@ struct Navigation: View {
                         Image(systemName: "person")
                         Text("Friends")
                     }
-                }.accentColor(.white)
+                }.onAppear() {
+                    UITabBar.appearance().backgroundColor = UIColor(Color(hex: "#1C1C1E"))
+                }.tint(.white)
         }
     
 }
