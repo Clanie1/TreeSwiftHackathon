@@ -3,9 +3,19 @@ import SwiftUI
 
 struct FriendsView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            FriendComponent()
-            FriendComponent()
-        }
+        NavigationStack{
+            VStack{
+                HStack(){
+                    Text("Amigos").font(.title).fontWeight(.bold)
+                }
+                Spacer()
+                FriendComponent()
+                FriendComponent()
+            }    }
+        
     }
+}
+
+#Preview {
+    FriendsView()
 }

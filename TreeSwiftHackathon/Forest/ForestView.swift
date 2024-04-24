@@ -9,7 +9,6 @@ struct ForestView: View {
     @State var isFriendView: Bool = false
     
     var body: some View {
-
         VStack {
             if !isFriendView {
                 CoinView(coins: $coins)
@@ -36,4 +35,8 @@ struct ForestView: View {
             }
         }
     }
+}
+
+#Preview {
+    ForestView(selectedItem: .none, coins: 10000, isBuilding: false, isFriendView: false)
 }
