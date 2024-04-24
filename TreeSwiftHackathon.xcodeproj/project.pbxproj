@@ -182,6 +182,7 @@
 		F1B7D1DB2BD89D38008B4E1F /* TreeSwiftHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				F1F2AAE02BD9AF4400464677 /* RegistroConsumo */,
 				F12B40682BD9748E00FEB4A9 /* Registro */,
 				F13426C32BD8ADC9007BA404 /* Actividad */,
 				6A0868EE2BD8A69F007D899F /* Social */,
@@ -219,6 +220,13 @@
 				F1B7D1F92BD89D39008B4E1F /* TreeSwiftHackathonUITestsLaunchTests.swift */,
 			);
 			path = TreeSwiftHackathonUITests;
+			sourceTree = "<group>";
+		};
+		F1F2AAE02BD9AF4400464677 /* RegistroConsumo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegistroConsumo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
