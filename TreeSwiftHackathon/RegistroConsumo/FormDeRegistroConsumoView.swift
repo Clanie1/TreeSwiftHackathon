@@ -23,9 +23,23 @@ struct FormDeRegistroConsumoView: View {
     @State private var formSelectedType:String = formType.comida.rawValue
     @State private var amount = "0"
     
+    @Binding var historicData: [BarData]
+    @Binding var mes: String
+    @Binding var mesMessagae: String
+    @Binding var mesPasado: String
+    @Binding var offsetTotal: String
+    @Binding var coins: Int
+    
+    
     func imprimir(){
-        print("")
+        historicData.append(BarData(value: 60, color: "#71C648"))
+        mes = "Abril 2024"
+        mesMessagae = "27.2 CO2e debajo de tú promedio"
+        mesPasado = "60,2 CO2e"
+        offsetTotal = "15,3 CO2e"
+        coins += 3420
         
+        print("MENSAJES CAMBIADOS")
     }
     
     @State private var inputLuz: String = "0.0"
@@ -179,6 +193,3 @@ struct FormDeRegistroConsumoView: View {
     }
 }
 
-#Preview {
-    FormDeRegistroConsumoView()
-}

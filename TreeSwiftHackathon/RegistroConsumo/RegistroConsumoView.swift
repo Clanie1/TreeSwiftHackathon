@@ -10,7 +10,17 @@ import SwiftUI
 struct RegistroConsumoView: View {
     
     @State var selectedItem: ItemType = .none
-    @State var coins: Int = 10000
+    
+    
+    
+    @Binding var historicData: [BarData]
+    @Binding var mes: String
+    @Binding var mesMessagae: String
+    @Binding var mesPasado: String
+    @Binding var offsetTotal: String
+    @Binding var coins: Int
+
+    
     
     var body: some View {
         NavigationView{
@@ -26,7 +36,7 @@ struct RegistroConsumoView: View {
                 
                 GridView(selectedItem: $selectedItem, coins: $coins).padding(.leading, 20).padding(.trailing, 20)
                 
-               FormDeRegistroConsumoView()
+                FormDeRegistroConsumoView(historicData: $historicData, mes: $mes, mesMessagae: $mesMessagae, mesPasado: $mesPasado, offsetTotal: $offsetTotal, coins: $coins)
                 
                 Spacer()
             }.background(Color(hex:"#87AFEC"))
@@ -34,6 +44,3 @@ struct RegistroConsumoView: View {
     }
 }
 
-#Preview {
-    RegistroConsumoView()
-}

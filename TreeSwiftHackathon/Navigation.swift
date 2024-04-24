@@ -46,12 +46,13 @@ struct Navigation: View {
     
     @State var mesPasado: String = "87,1 CO2e"
     @State var offsetTotal: String = "20,3 CO2e"
+    @State var coins: Int = 10000
 
     var body: some View {
         TabView(selection: $selectedTabindex) {
             FriendsView().tabItem {Label("Social", systemImage: "person")}
-            ForestView(historicData: historicData, mes: mes, mesMessage: mesMessagae, mesPasadoValue: mesPasado, offsetTotalValue: offsetTotal).tabItem{Label("Mi Parque", systemImage: "house")}.background(Color(hex: "#87AFEC"))
-            RegistroConsumoView().tabItem{
+            ForestView(historicData: historicData, mes: mes, mesMessage: mesMessagae, mesPasadoValue: mesPasado, offsetTotalValue: offsetTotal, coins: $coins).tabItem{Label("Mi Parque", systemImage: "house")}.background(Color(hex: "#87AFEC"))
+            RegistroConsumoView(historicData: $historicData, mes: $mes, mesMessagae: $mesMessagae, mesPasado: $mesPasado, offsetTotal: $offsetTotal).tabItem{
                 Label("Actividad", systemImage: "square.and.arrow.up")
             }
             MapView().tabItem { Label("Mapa", systemImage: "map") }
