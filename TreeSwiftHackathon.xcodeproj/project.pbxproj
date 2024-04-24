@@ -16,6 +16,7 @@
 		6A0868F02BD8A6AA007D899F /* FriendComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0868EF2BD8A6AA007D899F /* FriendComponent.swift */; };
 		6A0868F32BD8A6CC007D899F /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 6A0868F22BD8A6CC007D899F /* Toast */; };
 		6A0868F52BD8A6EF007D899F /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0868F42BD8A6EF007D899F /* FriendsView.swift */; };
+		6A3654102BD8C6EA00199609 /* StatsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36540F2BD8C6EA00199609 /* StatsBar.swift */; };
 		F13426C52BD8ADE2007BA404 /* ActividadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13426C42BD8ADE2007BA404 /* ActividadView.swift */; };
 		F19699A32BD8BC61002E73E1 /* FriendProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19699A22BD8BC61002E73E1 /* FriendProfileView.swift */; };
 		F1B7D1DD2BD89D38008B4E1F /* TreeSwiftHackathonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7D1DC2BD89D38008B4E1F /* TreeSwiftHackathonApp.swift */; };
@@ -53,6 +54,7 @@
 		6A0868EC2BD8A696007D899F /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		6A0868EF2BD8A6AA007D899F /* FriendComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendComponent.swift; sourceTree = "<group>"; };
 		6A0868F42BD8A6EF007D899F /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		6A36540F2BD8C6EA00199609 /* StatsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBar.swift; sourceTree = "<group>"; };
 		F13426C42BD8ADE2007BA404 /* ActividadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActividadView.swift; sourceTree = "<group>"; };
 		F19699A22BD8BC61002E73E1 /* FriendProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileView.swift; sourceTree = "<group>"; };
 		F1B7D1D92BD89D38008B4E1F /* TreeSwiftHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeSwiftHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 				6A0868E82BD8A67B007D899F /* ForestView.swift */,
 				6A0868EA2BD8A68B007D899F /* GridView.swift */,
 				6A0868EC2BD8A696007D899F /* Tile.swift */,
+				6A36540F2BD8C6EA00199609 /* StatsBar.swift */,
 			);
 			path = Forest;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				6A0868EB2BD8A68B007D899F /* GridView.swift in Sources */,
 				6A0868E22BD8A601007D899F /* Navigation.swift in Sources */,
 				F1B7D1DF2BD89D38008B4E1F /* ContentView.swift in Sources */,
+				6A3654102BD8C6EA00199609 /* StatsBar.swift in Sources */,
 				F1B7D1DD2BD89D38008B4E1F /* TreeSwiftHackathonApp.swift in Sources */,
 				F13426C52BD8ADE2007BA404 /* ActividadView.swift in Sources */,
 			);

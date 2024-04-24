@@ -48,21 +48,21 @@ struct TileView: View {
                 ZStack {
                     Rectangle()
                         .fill(Color.green)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
             case .house:
                 ZStack {
                     Rectangle()
                         .fill(Color.orange)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
             case .tree:
                 ZStack {
                     Rectangle()
                         .fill(Color.yellow)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
 
                 }
@@ -70,15 +70,19 @@ struct TileView: View {
                 ZStack {
                     Rectangle()
                         .fill(Color.yellow)
-                        .frame(width: gridSideLength, height: gridSideLength)
+                        .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
 
             case .none:
-                Rectangle()
-                    .fill(Color.white)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
-                    .frame(width: gridSideLength, height: gridSideLength)
+                ZStack {
+
+                    Rectangle()
+                        .fill(Color.white)
+                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                        .frame(width: .infinity, height: gridSideLength)
+                
+                }
             }
         }
     }

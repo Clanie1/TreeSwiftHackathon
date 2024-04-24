@@ -27,22 +27,71 @@ func getPriceForUpgrade(itemType: ItemType, currentLevel: Int) -> Int {
 struct BuildButtons: View {
     
     @Binding var selectedItem: ItemType
+    @Binding var buildMode: Bool
     
     var body: some View {
-        HStack {
-            Button("Grass") {
+        VStack {
+            HStack {
+                Text("Elementos").foregroundColor(.white)
+                Spacer()
+                Text("Precio").foregroundColor(.white)
+            }
+            Rectangle().fill(Color(hex: "#8E8E93")).frame(width: .infinity, height: 2)
+            Button(action: {
                 selectedItem = .grass
+
+            }) {
+                HStack {
+                    Text("Grass").foregroundColor(selectedItem == .grass ? .blue : .white)
+                    Spacer()
+                    Text("200").foregroundColor(selectedItem == .grass ? .blue : .white)
+                }
             }
-            Button("Park") {
-                selectedItem = .park
-            }
-            Button("House") {
-                selectedItem = .house
-            }
-            Button("Tree") {
+            Button(action: {
                 selectedItem = .tree
+
+            }) {
+                HStack {
+                    Text("Tree").foregroundColor(selectedItem == .tree ? .blue : .white)
+                    Spacer()
+                    Text("500").foregroundColor(selectedItem == .tree ? .blue : .white)
+                }
             }
-        }
+            Button(action: {
+                selectedItem = .house
+
+            }) {
+                HStack {
+                    Text("House").foregroundColor(selectedItem == .house ? .blue : .white)
+                    Spacer()
+                    Text("1000").foregroundColor(selectedItem == .house ? .blue : .white)
+                }
+            }
+            Button(action: {
+                selectedItem = .park
+
+            }) {
+                HStack {
+                    Text("Park").foregroundColor(selectedItem == .park ? .blue : .white)
+                    Spacer()
+                    Text("2000").foregroundColor(selectedItem == .park ? .blue : .white)
+                }
+            }
+            Button(action: {
+                buildMode = false
+            }) {
+                Text("Salir").foregroundColor(.white)
+            }
+
+
+        }.padding().background(Color(hex: "#1C1C1E")).clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 5.0, bottomLeading: 0.0, bottomTrailing: 0.0, topTrailing: 5.0), style: .continuous))
     }
+}
+
+#Preview {
+    @State var exampleItemSelected: ItemType = .grass
+    @State var buildMode: Bool = true
+
+    return BuildButtons(selectedItem: $exampleItemSelected, buildMode: $buildMode)
 }
 

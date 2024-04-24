@@ -10,69 +10,136 @@ struct ForestView: View {
     
     var body: some View {
         VStack {
-            if !isFriendView {
-                CoinView(coins: $coins)
+            
+            VStack(spacing: 2) {
+                HStack {
+                    Text("Mi Parque").bold().font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.white)
+                    Spacer()
+                }.padding()
+                
+                if !isFriendView {
+                    CoinView(coins: $coins)
+                }
             }
         
             GridView(selectedItem: $selectedItem, coins: $coins).padding(.leading, 20).padding(.trailing, 20)
             
-            HStack(spacing: 14) {
-                VStack {
-                    Text("Mes Pasado").foregroundColor(Color(hex: "#8E8E93")).font(.system(size: 14))
-                    Text("34,1 CO2e").foregroundColor(Color(hex: "#71C648")).font(.system(size: 14)).bold()
-                }
-                VStack {
-                    Text("Offset Total").foregroundColor(Color(hex: "#8E8E93")).font(.system(size: 14))
-                    Text("34,1 CO2e").foregroundColor(Color(hex: "#71C648")).font(.system(size: 14)).bold()
-                }
-            }
-            .padding(.top, 4)
-            .padding(.leading, 15)
-            .padding(.bottom, 4)
-            .padding(.trailing, 15)
-            .foregroundColor(Color(hex: "#F9C700"))
-            .background(Color(hex: "#1C1C1E"))
-            .cornerRadius(5.0)
-                        
-            Spacer()
-
             if !isFriendView {
+
+
                 Group {
                     if isBuilding {
                         VStack {
-                            BuildButtons(selectedItem: $selectedItem)
-                            Button("Exit") {
-                                self.isBuilding = false
-                                self.selectedItem = .none
-                            }
+                            Spacer()
+                            BuildButtons(selectedItem: $selectedItem, buildMode: $isBuilding)
+                          
                         }
                     } else {
                         Button("Construir") {
                             self.isBuilding = true
                         }
                         .padding(.top, 7)
-                        .padding(.leading, 14)
+                        .padding(.leading, 60)
                         .padding(.bottom, 7)
-                        .padding(.trailing, 14)
+                        .padding(.trailing, 60)
                         .background(Color(hex: "#F9C700"))
                         .foregroundColor(.black)
                         .cornerRadius(40.0)
                         
-                        Button("Agregar Recibo") {
-                            self.isBuilding = true
+                        VStack {
+                            HStack(spacing: 14) {
+                                VStack(spacing: 6) {
+                                    Text("Mes Pasado").foregroundColor(Color(hex: "#8E8E93")).font(.system(size: 15))
+                                    Text("34,1 CO2e").foregroundColor(Color(hex: "#71C648")).font(.system(size: 16)).bold()
+                                }   
+                                Rectangle().fill(Color(hex: "#8E8E93")).frame(width: 1, height: 40)
+                                VStack(spacing: 6) {
+                                    Text("Offset Total").foregroundColor(Color(hex: "#8E8E93")).font(.system(size: 15))
+                                    Text("34,1 CO2e").foregroundColor(Color(hex: "#71C648")).font(.system(size: 16)).bold()
+                                }
+                            }
+                            .padding(.top, 10)
+                            .padding(.leading, 65)
+                            .padding(.bottom, 10)
+                            .padding(.trailing, 65)
+                            .foregroundColor(Color(hex: "#F9C700"))
+                            .background(Color(hex: "#1C1C1E"))
+                            .cornerRadius(12.0)
+                            
+                            
+                            VStack(alignment:.leading, spacing: 14) {
+                                
+                                    
+                                    Text("Tu huella de CO2").foregroundColor(.white).fontWeight(.bold)
+                                    
+                                
+                                HStack {
+                                    StatsBar(value: 85, color: "#FF3B30", month: "Ene")
+                                    StatsBar(value: 90, color: "#FF3B30", month: "Feb")
+                                    StatsBar(value: 87, color: "#FF3B30", month: "Mar")
+                                    StatsBar(value: 80, color: "#71C648", month: "Abr")
+                                    StatsBar(value: 75, color: "#71C648", month: "May")
+                                    StatsBar(value: 80, color: "#FF3B30", month: "Jun")
+                                    StatsBar(value: 70, color: "#71C648", month: "Jul")
+                                    StatsBar(value: 60, color: "#71C648", month: "Ago")
+                                    StatsBar(value: 60, color: "#71C648", month: "Ago")
+                                    StatsBar(value: 60, color: "#71C648", month: "Ago")
+                                    
+
+
+                                }
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text("Marzo 2024").foregroundColor(.white).fontWeight(.bold).font(.headline)
+                                        Text("1,5 CO2e debajo de tú promedio").foregroundColor(Color(hex:"#71C648")).fontWeight(.bold).font(.subheadline)
+                                        
+                                    }
+                              
+                                
+                            }
+                            
+                            .padding()
+                            .foregroundColor(Color(hex: "#F9C700"))
+                            .background(Color(hex: "#1C1C1E"))
+                            .cornerRadius(12.0)
                         }
-                        .padding(.top, 7)
-                        .padding(.leading, 14)
-                        .padding(.bottom, 7)
-                        .padding(.trailing, 14)
-                        .background(Color(hex: "#F9C700"))
-                        .foregroundColor(.black)
-                        .cornerRadius(40.0)
+                        
+                        HStack(spacing: 14) {
+                            Button("Aprender Más") {
+                                
+                            }.foregroundColor(.white)
+                        }
+                        .padding(.top, 10)
+                        .padding(.leading, 110)
+                        .padding(.bottom, 10)
+                        .padding(.trailing, 110)
+                        .foregroundColor(Color(hex: "#F9C700"))
+                        .background(Color(hex: "#1C1C1E"))
+                        .cornerRadius(12.0)
+                        
+//                        HStack {
+                           
+                            
+//                            Button("Agregar Recibo") {
+//                                self.isBuilding = true
+//                            }
+//                            .padding(.top, 7)
+//                            .padding(.leading, 14)
+//                            .padding(.bottom, 7)
+//                            .padding(.trailing, 14)
+//                            .background(Color(hex: "#F9C700"))
+//                            .foregroundColor(.black)
+//                            .cornerRadius(40.0)
+                            
+                        
+//                        }
+                        
                     }
+                    Spacer()
                 }
+
             }
             
-            Spacer()
         }
     }
 }
