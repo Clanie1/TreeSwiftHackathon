@@ -9,6 +9,9 @@ import SwiftUI
 
 struct FriendProfileView: View {
     
+    @State var selectedItem: ItemType = .none
+    @State var coins: Int = 0
+    
     func imprimir(){
         print("hello")
     }
@@ -59,8 +62,10 @@ struct FriendProfileView: View {
                 Image("logro3").resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 10)).padding(8).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 
             }.border(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
+            GridView(selectedItem: $selectedItem, coins: $coins)
             Spacer()
         }.padding().background(Color(hex: "#87AFEC"))
+        
     }
 }
 

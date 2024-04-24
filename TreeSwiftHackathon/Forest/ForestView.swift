@@ -32,11 +32,14 @@ struct ForestView: View {
                         VStack {
                             Spacer()
                             BuildButtons(selectedItem: $selectedItem, buildMode: $isBuilding)
+
                           
-                        }
+                        }.transition(.move(edge: .bottom)).padding(0)
                     } else {
                         Button("Construir") {
-                            self.isBuilding = true
+                            withAnimation() {
+                                self.isBuilding = true
+                            }
                         }
                         .padding(.top, 7)
                         .padding(.leading, 60)
@@ -140,7 +143,7 @@ struct ForestView: View {
 
             }
             
-        }
+        }.border(.black)
     }
 }
 

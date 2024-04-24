@@ -42,9 +42,15 @@ struct BuildButtons: View {
 
             }) {
                 HStack {
-                    Text("Grass").foregroundColor(selectedItem == .grass ? .blue : .white)
+                    HStack {
+                        Rectangle().fill(.white).frame(width: 68, height: 68)
+                        Text("Grass").foregroundColor(selectedItem == .grass ? .blue : .white)
+                    }
                     Spacer()
-                    Text("200").foregroundColor(selectedItem == .grass ? .blue : .white)
+                    HStack(spacing: 2) {
+                        Image(systemName: "dollarsign.circle")
+                        Text("200")
+                    }.foregroundColor(selectedItem == .grass ? .blue : Color(hex: "#F9C700"))
                 }
             }
             Button(action: {
@@ -52,9 +58,15 @@ struct BuildButtons: View {
 
             }) {
                 HStack {
-                    Text("Tree").foregroundColor(selectedItem == .tree ? .blue : .white)
+                    HStack {
+                        Rectangle().fill(.white).frame(width: 68, height: 68)
+                        Text("Tree").foregroundColor(selectedItem == .tree ? .blue : .white)
+                    }
                     Spacer()
-                    Text("500").foregroundColor(selectedItem == .tree ? .blue : .white)
+                    HStack(spacing: 2) {
+                        Image(systemName: "dollarsign.circle")
+                        Text("500")
+                    }.foregroundColor(selectedItem == .tree ? .blue : Color(hex: "#F9C700"))
                 }
             }
             Button(action: {
@@ -62,9 +74,15 @@ struct BuildButtons: View {
 
             }) {
                 HStack {
-                    Text("House").foregroundColor(selectedItem == .house ? .blue : .white)
+                    HStack {
+                        Rectangle().fill(.white).frame(width: 68, height: 68)
+                        Text("House").foregroundColor(selectedItem == .house ? .blue : .white)
+                    }
                     Spacer()
-                    Text("1000").foregroundColor(selectedItem == .house ? .blue : .white)
+                    HStack(spacing: 2) {
+                        Image(systemName: "dollarsign.circle")
+                        Text("1000")
+                    }.foregroundColor(selectedItem == .house ? .blue : Color(hex: "#F9C700"))
                 }
             }
             Button(action: {
@@ -72,9 +90,16 @@ struct BuildButtons: View {
 
             }) {
                 HStack {
-                    Text("Park").foregroundColor(selectedItem == .park ? .blue : .white)
+                    HStack {
+                        
+                        Rectangle().fill(.white).frame(width: 68, height: 68)
+                        Text("Park").foregroundColor(selectedItem == .park ? .blue : .white)
+                    }
                     Spacer()
-                    Text("2000").foregroundColor(selectedItem == .park ? .blue : .white)
+                    HStack(spacing: 2) {
+                        Image(systemName: "dollarsign.circle")
+                        Text("2000")
+                    }.foregroundColor(selectedItem == .park ? .blue : Color(hex: "#F9C700"))
                 }
             }
             Button(action: {

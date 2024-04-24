@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct Navigation: View {
+    
+    @State private var selectedTabindex = 0
+    
     var body: some View {
         TabView {
             FriendsView().tabItem {Label("Social", systemImage: "person")}
