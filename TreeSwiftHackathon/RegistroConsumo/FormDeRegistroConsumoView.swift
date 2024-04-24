@@ -73,7 +73,9 @@ struct FormDeRegistroConsumoView: View {
             }.padding(5)
             
             if formSelectedType == "Comida"{
-                
+                let carneValue = Double(carne) ?? 0.0
+                let carneCO2 = carneValue * 70.6
+
                 VStack(alignment:.leading){
                     Text("Registra tu consumo de alimentos")
                     Text("1 porcion = 100 grs.").font(.subheadline).foregroundStyle(.yellow).fontWeight(.bold)
@@ -96,8 +98,8 @@ struct FormDeRegistroConsumoView: View {
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text("12,2 KgCO2e").foregroundStyle(.green).fontWeight(.bold)
-                }.padding()
+                    Text("\(carneCO2) KgCO2e").foregroundStyle(.green).fontWeight(.bold)
+                            }.padding()
                 Button(action:imprimir ) {
                       Text("Register")
                         .foregroundColor(.white)
@@ -109,6 +111,8 @@ struct FormDeRegistroConsumoView: View {
                     .cornerRadius(10).padding().frame(maxWidth:.infinity)
             }
             else if formSelectedType == "Luz"{
+                let luzValue = Double(luzConsumo) ?? 0.0
+                let luzCO2 = luzValue * 0.0056
                 VStack(alignment:.leading){
                     Text("Registra tu consumo de Luz")
                     Text("En tu recibo podrás obtener los kWh/mes").font(.subheadline).foregroundStyle(.yellow).fontWeight(.bold)
@@ -129,7 +133,7 @@ struct FormDeRegistroConsumoView: View {
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text(String(describing: registroTotalLuz) + " kgCO2").foregroundStyle(.green).fontWeight(.bold)
+                    Text("\(luzCO2) kgCO2").foregroundStyle(.green).fontWeight(.bold)
                 }.padding()
                 Button(action:imprimir ) {
                       Text("Register")
@@ -142,6 +146,10 @@ struct FormDeRegistroConsumoView: View {
                     .cornerRadius(10).padding().frame(maxWidth:.infinity)
             }
             else if formSelectedType == "Transporte"{
+                
+                let trasnporteValue = Double(transporteConsumo) ?? 0.0
+                let transporteCO2 = trasnporteValue * 2.3025
+                
                 VStack(alignment:.leading){
                     Text("Registra tú consumo de combustible")
                     Text("La unidad de medida es en litros (lts.)").font(.subheadline).foregroundStyle(.yellow).fontWeight(.bold)
@@ -175,7 +183,9 @@ struct FormDeRegistroConsumoView: View {
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text("120 KgCO2e").foregroundStyle(.green).fontWeight(.bold)
+                    HStack{
+                        Text("\(transporteCO2) KgCO2e").foregroundStyle(.green).fontWeight(.bold)
+                    }
                 }.padding()
                 Button(action:imprimir ) {
                       Text("Register")
@@ -191,4 +201,3 @@ struct FormDeRegistroConsumoView: View {
         }.background(.black).foregroundColor(.white).cornerRadius(10).padding(8)
     }
 }
-
