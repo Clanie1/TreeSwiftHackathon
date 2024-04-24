@@ -50,8 +50,7 @@ struct GridView: View {
                     ForEach(0..<25, id: \.self) { index in
                         TileView(tileData: $gridData[index/5][index%5], selectedItem: $selectedItem, coins: $coins, gridSideLength:  gridSideLength)
                     }
-                }
-                .rotation3DEffect(
+                }.rotation3DEffect(
                     .degrees(45),
                     axis: (x: 1.0, y: 0.0, z: 0.0)
                 )

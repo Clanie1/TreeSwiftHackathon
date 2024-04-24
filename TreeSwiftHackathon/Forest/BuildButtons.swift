@@ -29,7 +29,6 @@ struct BuildButtons: View {
     @Binding var selectedItem: ItemType
     @Binding var buildMode: Bool
     
-  
     var body: some View {
         VStack {
             HStack {
@@ -112,7 +111,6 @@ struct BuildButtons: View {
 
 
         }.padding().background(Color(hex: "#1C1C1E")).clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 5.0, bottomLeading: 0.0, bottomTrailing: 0.0, topTrailing: 5.0), style: .continuous))
-            
     }
 }
 
