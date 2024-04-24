@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum ItemType {
+enum ItemType: String, Codable {
     case none
     case grass
     case park
