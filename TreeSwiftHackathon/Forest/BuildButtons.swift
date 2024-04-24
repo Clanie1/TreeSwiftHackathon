@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum ItemType {
+enum ItemType: String, Codable {
     case none
     case grass
     case park
@@ -36,6 +36,7 @@ struct BuildButtons: View {
                 Spacer()
                 Text("Precio").foregroundColor(.white)
             }
+            
             Rectangle().fill(Color(hex: "#8E8E93")).frame(width: .infinity, height: 2)
             Button(action: {
                 selectedItem = .grass
@@ -43,8 +44,8 @@ struct BuildButtons: View {
             }) {
                 HStack {
                     HStack {
-                        Rectangle().fill(.white).frame(width: 68, height: 68)
-                        Text("Grass").foregroundColor(selectedItem == .grass ? .blue : .white)
+                        Image("Bush").resizable().scaledToFit().clipShape(Rectangle()).frame(width: 68, height: 68)
+                        Text("Arbusto").foregroundColor(selectedItem == .grass ? .blue : .white)
                     }
                     Spacer()
                     HStack(spacing: 2) {
@@ -59,8 +60,8 @@ struct BuildButtons: View {
             }) {
                 HStack {
                     HStack {
-                        Rectangle().fill(.white).frame(width: 68, height: 68)
-                        Text("Tree").foregroundColor(selectedItem == .tree ? .blue : .white)
+                        Image("Oak").resizable().scaledToFit().clipShape(Rectangle()).frame(width: 68, height: 68)
+                        Text("Árbol").foregroundColor(selectedItem == .tree ? .blue : .white)
                     }
                     Spacer()
                     HStack(spacing: 2) {
@@ -75,8 +76,8 @@ struct BuildButtons: View {
             }) {
                 HStack {
                     HStack {
-                        Rectangle().fill(.white).frame(width: 68, height: 68)
-                        Text("House").foregroundColor(selectedItem == .house ? .blue : .white)
+                        Image("Bench").resizable().scaledToFit().clipShape(Rectangle()).frame(width: 68, height: 68)
+                        Text("Silla").foregroundColor(selectedItem == .house ? .blue : .white)
                     }
                     Spacer()
                     HStack(spacing: 2) {
@@ -92,8 +93,8 @@ struct BuildButtons: View {
                 HStack {
                     HStack {
                         
-                        Rectangle().fill(.white).frame(width: 68, height: 68)
-                        Text("Park").foregroundColor(selectedItem == .park ? .blue : .white)
+                        Image("Fountain").resizable().scaledToFit().clipShape(Rectangle()).frame(width: 68, height: 68)
+                        Text("Fuente").foregroundColor(selectedItem == .park ? .blue : .white)
                     }
                     Spacer()
                     HStack(spacing: 2) {
