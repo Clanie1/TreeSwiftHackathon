@@ -3,7 +3,6 @@ import SwiftUI
 struct ForestView: View {
     
     @State var selectedItem: ItemType = .none
-    @State var coins: Int = 10000
     @State var isBuilding: Bool = false
     
     @State var isFriendView: Bool = false
@@ -15,6 +14,8 @@ struct ForestView: View {
     @State var mesPasadoValue: String = ""
     
     @State var offsetTotalValue: String = ""
+    
+    @Binding var coins: Int
 
 
     var body: some View {
