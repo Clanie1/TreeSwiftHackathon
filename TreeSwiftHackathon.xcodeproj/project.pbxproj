@@ -25,6 +25,7 @@
 		6A177AFF2BD95C51001235CB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A177AFE2BD95C51001235CB /* Supabase.swift */; };
 		6A3654102BD8C6EA00199609 /* StatsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36540F2BD8C6EA00199609 /* StatsBar.swift */; };
 		6A3654132BD8E02600199609 /* ScanCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3654122BD8E02600199609 /* ScanCategories.swift */; };
+		6AD3EE802BD9B09700A635B7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3EE7F2BD9B09700A635B7 /* MapView.swift */; };
 		F12B406A2BD974AB00FEB4A9 /* RegistroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B40692BD974AB00FEB4A9 /* RegistroView.swift */; };
 		F12B406C2BD97A6700FEB4A9 /* RegistroProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B406B2BD97A6700FEB4A9 /* RegistroProgressView.swift */; };
 		F13426C52BD8ADE2007BA404 /* ActividadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13426C42BD8ADE2007BA404 /* ActividadView.swift */; };
@@ -68,6 +69,7 @@
 		6A177AFE2BD95C51001235CB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		6A36540F2BD8C6EA00199609 /* StatsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBar.swift; sourceTree = "<group>"; };
 		6A3654122BD8E02600199609 /* ScanCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCategories.swift; sourceTree = "<group>"; };
+		6AD3EE7F2BD9B09700A635B7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F12B40692BD974AB00FEB4A9 /* RegistroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroView.swift; sourceTree = "<group>"; };
 		F12B406B2BD97A6700FEB4A9 /* RegistroProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroProgressView.swift; sourceTree = "<group>"; };
 		F13426C42BD8ADE2007BA404 /* ActividadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActividadView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = Social;
 			sourceTree = "<group>";
 		};
+		6AD3EE7E2BD9B06D00A635B7 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3EE7F2BD9B09700A635B7 /* MapView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		F12B40682BD9748E00FEB4A9 /* Registro */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 		F1B7D1DB2BD89D38008B4E1F /* TreeSwiftHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				6AD3EE7E2BD9B06D00A635B7 /* Navigation */,
 				F1F2AAE02BD9AF4400464677 /* RegistroConsumo */,
 				F12B40682BD9748E00FEB4A9 /* Registro */,
 				F13426C32BD8ADC9007BA404 /* Actividad */,
@@ -372,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD3EE802BD9B09700A635B7 /* MapView.swift in Sources */,
 				6A0868F52BD8A6EF007D899F /* FriendsView.swift in Sources */,
 				6A0868E92BD8A67B007D899F /* ForestView.swift in Sources */,
 				F19699A32BD8BC61002E73E1 /* FriendProfileView.swift in Sources */,
@@ -653,6 +665,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6AFUHTK7G3;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to access your location";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -671,6 +684,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6AFUHTK7G3;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to access your location";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.TreeSwiftHackathonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

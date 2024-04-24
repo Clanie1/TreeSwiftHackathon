@@ -11,6 +11,8 @@ struct Navigation: View {
             ActividadView().tabItem{
                 Label("Actividad", systemImage: "square.and.arrow.up")
             }
+            MapView().tabItem { Label("Mapa", systemImage: "map") }
+            
         }.onAppear() {
             UITabBar.appearance().backgroundColor = UIColor(Color(hex: "#1C1C1E"))
         }.tint(.white)
