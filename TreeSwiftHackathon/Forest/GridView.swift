@@ -27,6 +27,7 @@ struct GridView: View {
     @State private var gridData: [[TileData]] = Array(repeating: Array(repeating: TileData( type: .none, level: 1), count: 5), count: 5)
 
     
+    @State var userId: Int = 1
     
     @Binding var selectedItem: ItemType
     @Binding var coins: Int
@@ -56,7 +57,7 @@ struct GridView: View {
             }
         }.onAppear {
             Task {
-                if let url = URL(string: "https://mbvodwyplawoqehzwfld.supabase.co/rest/v1/grid?select=%2A") {
+                if let url = URL(string: "https://mbvodwyplawoqehzwfld.supabase.co/rest/v1/grid?user_id=eq.\(userId)&select=%2A") {
                     var request = URLRequest(url: url)
                         request.httpMethod = "GET"
                         request.setValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1idm9kd3lwbGF3b3FlaHp3ZmxkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTM5NjE1NzcsImV4cCI6MjAyOTUzNzU3N30.I6x41mVeRuz3eTLqRIUv5Q-8cGNQ83TGm_3xNVVnf0M", forHTTPHeaderField: "apiKey")

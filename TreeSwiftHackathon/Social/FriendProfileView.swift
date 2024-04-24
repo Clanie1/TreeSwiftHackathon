@@ -12,6 +12,12 @@ struct FriendProfileView: View {
     @State var selectedItem: ItemType = .none
     @State var coins: Int = 0
     
+    @State var userId: Int
+    @State var username: String
+    @State var createdAt: String
+    @State var fullName: String
+    
+
     func imprimir(){
         print("hello")
     }
@@ -22,17 +28,17 @@ struct FriendProfileView: View {
                 
                 HStack{
                     
-                    Text("Daniel Barocio").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).fontWeight(.bold).foregroundStyle(Color.white)
+                    Text(fullName).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).fontWeight(.bold).foregroundStyle(Color.white)
                     Text("200 pts").font(.title).fontWeight(.bold).foregroundStyle(Color.yellow)
                 }
                 HStack{
-                    Text("@DaniBarocio11").font(.subheadline).fontWeight(.medium).foregroundColor(.white)
+                    Text("@" + username).font(.subheadline).fontWeight(.medium).foregroundColor(.white)
                     Text("*")
-                    Text("Desde Abril  2017 ").font(.subheadline).fontWeight(.medium)
+                    Text(createdAt).font(.subheadline).fontWeight(.medium)
                     Spacer()
                 }
             
-            GridView(selectedItem: $selectedItem, coins: $coins)
+            GridView( userId: userId, selectedItem: $selectedItem, coins: $coins)
 
             HStack(alignment:.center ){
                 
@@ -76,5 +82,5 @@ struct FriendProfileView: View {
 }
 
 #Preview {
-    FriendProfileView()
+    FriendProfileView(userId: 2, username: "clanie1", createdAt: "Ayer", fullName: "Daniel Barocio")
 }
