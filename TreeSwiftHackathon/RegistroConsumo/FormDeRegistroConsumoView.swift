@@ -21,8 +21,11 @@ enum formType:String{
 struct FormDeRegistroConsumoView: View {
     
     @State private var formSelectedType:String = formType.comida.rawValue
-    @State private var amount = "0"
-    
+    @State private var carne = "0"
+    @State private var transporteConsumo = "0"
+    @State private var luzConsumo = "0"
+    @State private var genero = ""
+
     func imprimir(){
         print("")
         
@@ -54,26 +57,22 @@ struct FormDeRegistroConsumoView: View {
                 
                 HStack{
                     Text("Carne de Codero").padding()
-                    TextField("porción(100g)", text: $amount)
+                    TextField("porción(100g)", text: $carne)
                             .padding()
-                            .font(.title) // Sets the font to "Title" style
-                            .foregroundColor(.blue) // Sets the text color to blue
-                            // Adds a gray background with 20% opacity
+                            .font(.title)
+                            .foregroundColor(.blue)
                             .padding(.horizontal) // Adds
                     
                 }.background(
                     RoundedRectangle(cornerRadius: 10)
                       .fill(.gray.opacity(0.2))
                 ).padding()
-               
-                
-                
                 
                 Divider().overlay(.white)
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text("12,2 CO2e").foregroundStyle(.green).fontWeight(.bold)
+                    Text("12,2 KgCO2e").foregroundStyle(.green).fontWeight(.bold)
                 }.padding()
                 Button(action:imprimir ) {
                       Text("Register")
@@ -92,12 +91,11 @@ struct FormDeRegistroConsumoView: View {
                 }.padding()
                 HStack{
                     Text("Consumo   ").padding()
-                    TextField("kWh", text: $amount)
+                    TextField("kWh", text: $luzConsumo)
                             .padding()
-                            .font(.title) // Sets the font to "Title" style
-                            .foregroundColor(.blue) // Sets the text color to blue
-                            // Adds a gray background with 20% opacity
-                            .padding(.horizontal) // Adds
+                            .font(.title)
+                            .foregroundColor(.blue)
+                            .padding(.horizontal)
                     
                 }.background(
                     RoundedRectangle(cornerRadius: 10)
@@ -107,7 +105,7 @@ struct FormDeRegistroConsumoView: View {
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text("12,2 CO2e").foregroundStyle(.green).fontWeight(.bold)
+                    Text("12,2 KgCO2e").foregroundStyle(.green).fontWeight(.bold)
                 }.padding()
                 Button(action:imprimir ) {
                       Text("Register")
@@ -126,12 +124,11 @@ struct FormDeRegistroConsumoView: View {
                 }.padding()
                 HStack{
                     Text("Combustible").padding()
-                    TextField("kWh", text: $amount)
-                            .padding()
-                            .font(.title) // Sets the font to "Title" style
-                            .foregroundColor(.blue) // Sets the text color to blue
-                            // Adds a gray background with 20% opacity
-                            .padding(.horizontal) // Adds
+                    Picker("Select a paint color", selection: $genero) {
+                        Text("Regular")
+                        Text("Premium")
+                        Text("Diesel")
+                    }.frame(width:240)
                     
                 }.background(
                     RoundedRectangle(cornerRadius: 10)
@@ -139,7 +136,7 @@ struct FormDeRegistroConsumoView: View {
                 ).padding(.horizontal)
                 HStack{
                     Text("Consumo   ").padding()
-                    TextField("lts", text: $amount)
+                    TextField("lts", text: $transporteConsumo)
                             .padding()
                             .font(.title) // Sets the font to "Title" style
                             .foregroundColor(.blue) // Sets the text color to blue
@@ -154,7 +151,7 @@ struct FormDeRegistroConsumoView: View {
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text("12,2 CO2e").foregroundStyle(.green).fontWeight(.bold)
+                    Text("120 KgCO2e").foregroundStyle(.green).fontWeight(.bold)
                 }.padding()
                 Button(action:imprimir ) {
                       Text("Register")
