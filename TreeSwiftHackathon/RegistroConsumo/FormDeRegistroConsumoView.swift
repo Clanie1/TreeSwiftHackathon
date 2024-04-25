@@ -37,11 +37,13 @@ struct FormDeRegistroConsumoView: View {
     
     
     func imprimir(){
-        historicData.append(BarData(value: 60, color: "#71C648"))
+        
+        print(registroTotalLuz)
+        historicData.append(BarData(value: registroTotalLuz, color: "#71C648"))
         mes = "Abril 2024"
-        mesMessagae = "27.2 CO2e debajo de tú promedio"
-        mesPasado = "60,2 CO2e"
-        offsetTotal = "15,3 CO2e"
+        mesMessagae = "\(87.1 - registroTotalLuz) KgCO2e debajo de tú promedio"
+        mesPasado = "\(registroTotalLuz) KgCO2e"
+        offsetTotal = "15,3 KgCO2e"
         
         print(mes)
         print(mesMessagae)
@@ -54,7 +56,7 @@ struct FormDeRegistroConsumoView: View {
     @State private var inputLuz: String = "0.0"
 
     var registroTotalLuz: CGFloat {
-        return ((CGFloat(Float(luzConsumo) ?? 0.0) * 0.00056 * 1000) * 100).rounded() / 100
+        return CGFloat(Float(luzConsumo) ?? 0.0) * 128 / 1000
     }
     
     
@@ -115,8 +117,6 @@ struct FormDeRegistroConsumoView: View {
                     .cornerRadius(10).padding().frame(maxWidth:.infinity)
             }
             else if formSelectedType == "Luz"{
-                let luzValue = Double(luzConsumo) ?? 0.0
-                let luzCO2 = luzValue * 0.0056
                 VStack(alignment:.leading){
                     Text("Registra tu consumo de Luz")
                     Text("En tu recibo podrás obtener los kWh/mes").font(.subheadline).foregroundStyle(.yellow).fontWeight(.bold)
@@ -137,7 +137,7 @@ struct FormDeRegistroConsumoView: View {
                 HStack{
                     Text("Registro Total: ")
                     Spacer()
-                    Text("\(luzCO2) kgCO2").foregroundStyle(.green).fontWeight(.bold)
+                    Text("\(registroTotalLuz) kgCO2").foregroundStyle(.green).fontWeight(.bold)
                 }.padding()
                 Button(action:imprimir ) {
                       Text("Register")

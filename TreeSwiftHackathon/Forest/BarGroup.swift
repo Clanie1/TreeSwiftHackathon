@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BarGroup: View {
     
-    @State var historicData: [BarData] = []
+    @Binding var historicData: [BarData]
     
     var body: some View {
         HStack {

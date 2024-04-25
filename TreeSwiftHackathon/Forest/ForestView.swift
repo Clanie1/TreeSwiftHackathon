@@ -6,16 +6,14 @@ struct ForestView: View {
     @State var isBuilding: Bool = false
     
     @State var isFriendView: Bool = false
-    @State var historicData: [BarData] = []
         
-    @State var mes: String = ""
-    @State var mesMessage: String = ""
-    
-    @State var mesPasadoValue: String = ""
-    
-    @State var offsetTotalValue: String = ""
-    
-    @Binding var coins: Int
+    @Binding var historicData: [BarData]
+   @Binding var mes: String
+   @Binding var mesMessagae: String
+   @Binding var mesPasado: String
+   @Binding var offsetTotal: String
+   @Binding var coins: Int
+
     
     @State private var showingAlert = false
     
@@ -108,7 +106,7 @@ struct ForestView: View {
                                     
                                     
                                     
-                                        BarGroup(historicData: historicData)
+                                        BarGroup(historicData: $historicData)
                                     
                                     
                                     VStack(alignment: .leading) {

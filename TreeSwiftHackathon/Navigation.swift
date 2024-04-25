@@ -42,10 +42,10 @@ struct Navigation: View {
         BarData(value: 60, color: "#71C648")
     ]
     @State var mes: String = "Marzo 2024"
-    @State var mesMessagae: String = "1,5 CO2e debajo de tú promedio"
+    @State var mesMessagae: String = "1,5 KgCO2e debajo de tú promedio"
     
-    @State var mesPasado: String = "87,1 CO2e"
-    @State var offsetTotal: String = "20,3 CO2e"
+    @State var mesPasado: String = "87,1 KgCO2e"
+    @State var offsetTotal: String = "20,3 KgCO2e"
     @State var coins: Int = 10000
 
     var body: some View {
