@@ -16,6 +16,8 @@ struct ForestView: View {
 
     
     @State private var showingAlert = false
+    @State private var showAlert = false
+
     
     var body: some View {
         NavigationView{
@@ -41,9 +43,15 @@ struct ForestView: View {
                                 
                                 .foregroundColor(.black).offset(x: 18, y: 18)                 }
                             .font(.system(size: 20))
-                        } .alert("Important message", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
+                        }.onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                showAlert = true
+                            }
                         }
+                        .alert(isPresented: $showAlert) {
+                            Alert(title: Text("Mensaje de RegioAI"), message: Text("Intenta reducir tu consumo de carne y lácteos, optando por opciones más basadas en plantas."), dismissButton: .default(Text("OK")))
+                        }
+
                     }.padding()
                     
                     if !isFriendView {
