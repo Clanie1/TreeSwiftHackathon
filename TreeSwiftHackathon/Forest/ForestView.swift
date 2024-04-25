@@ -16,8 +16,9 @@ struct ForestView: View {
     @State var offsetTotalValue: String = ""
     
     @Binding var coins: Int
-
-
+    
+    @State private var showingAlert = false
+    
     var body: some View {
         NavigationView{
             
@@ -27,6 +28,24 @@ struct ForestView: View {
                     HStack {
                         Text("Mi Parque").bold().font(.title).foregroundColor(.white)
                         Spacer()
+                        Button(action: {
+                                print("Making API call...")
+                            
+                            
+                            showingAlert = true
+                        }) {
+                            ZStack {
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 50, height: 50)
+                                Image( "recomendacion").resizable().scaledToFit().foregroundColor(.black).frame(width: 30, height: 30)
+                                Circle().fill(Color.red).frame(width: 12, height:12)
+                                
+                                .foregroundColor(.black).offset(x: 18, y: 18)                 }
+                            .font(.system(size: 20))
+                        } .alert("Important message", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
                     }.padding()
                     
                     if !isFriendView {
@@ -85,7 +104,7 @@ struct ForestView: View {
                                 VStack(alignment:.leading, spacing: 14) {
                                     
                                     
-                                    Text("Tu huella de CO2").foregroundColor(.white).fontWeight(.bold)
+                                    Text("Tu huella de KgCO2").foregroundColor(.white).fontWeight(.bold)
                                     
                                     
                                     
