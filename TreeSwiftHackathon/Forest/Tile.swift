@@ -81,14 +81,14 @@ struct TileView: View {
             case .house:
                 ZStack {
                     Rectangle()
-                        .fill(Color.orange)
+                        .fill(Color.yellow)
                         .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
             case .tree:
                 ZStack {
                     Rectangle()
-                        .fill(Color.yellow)
+                        .fill(Color.orange)
                         .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
 
@@ -96,7 +96,7 @@ struct TileView: View {
             case .park:
                 ZStack {
                     Rectangle()
-                        .fill(Color.yellow)
+                        .fill(Color.red)
                         .frame(width: .infinity, height: gridSideLength)
                     Text(String(tileData.level))
                 }
