@@ -42,15 +42,19 @@ struct FormDeRegistroConsumoView: View {
         mesMessagae = "27.2 CO2e debajo de tú promedio"
         mesPasado = "60,2 CO2e"
         offsetTotal = "15,3 CO2e"
-        coins += 3420
         
-        print("MENSAJES CAMBIADOS")
+        print(mes)
+        print(mesMessagae)
+        print(mesPasado)
+        print(offsetTotal)
+        
+        coins += 3420
     }
     
     @State private var inputLuz: String = "0.0"
 
     var registroTotalLuz: CGFloat {
-        return ((CGFloat(Float(inputLuz) ?? 0.0) * 0.00056 * 1000) * 100).rounded() / 100
+        return ((CGFloat(Float(luzConsumo) ?? 0.0) * 0.00056 * 1000) * 100).rounded() / 100
     }
     
     
@@ -178,7 +182,7 @@ struct FormDeRegistroConsumoView: View {
                     Text("120 KgCO2e").foregroundStyle(.green).fontWeight(.bold)
                 }.padding()
                 Button(action:imprimir ) {
-                      Text("Register")
+                      Text("Registrar")
                         .foregroundColor(.white)
                         .font(.headline)
                         .padding(.horizontal,100)

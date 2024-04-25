@@ -10,7 +10,33 @@ struct TileView: View {
     
     var gridSideLength: CGFloat
     
+    @Binding var userId: Int
+    @Binding var gridData: [[TileData]]
+                            
     
+    func updateBackendItem() {
+        Task {
+            if let url = URL(string: "https://mbvodwyplawoqehzwfld.supabase.co/rest/v1/grid?user_id=eq.\(userId)") {
+                var request = URLRequest(url: url)
+                    request.httpMethod = "PATCH"
+                    request.setValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1idm9kd3lwbGF3b3FlaHp3ZmxkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTM5NjE1NzcsImV4cCI6MjAyOTUzNzU3N30.I6x41mVeRuz3eTLqRIUv5Q-8cGNQ83TGm_3xNVVnf0M", forHTTPHeaderField: "apiKey")
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                    
+                URLSession.shared.dataTask(with: request) { data, response, error in
+                    if let data = data {
+                        do {
+                            let jsonData = try? JSONEncoder().encode(["grid": gridData])
+                            request.httpBody = jsonData
+                            let task = URLSession.shared.dataTask(with: request)
+                            
+                        } catch {
+                            print("Error decoding JSON: \(error)")
+                        }
+                    }
+                }.resume()
+            }
+           }
+    }
     
     var body: some View {
         Button(action: {
@@ -42,6 +68,7 @@ struct TileView: View {
                 tileData.type = selectedItem
             }
             coins -= price
+            updateBackendItem()
         }) {
             switch tileData.type {
             case .grass:

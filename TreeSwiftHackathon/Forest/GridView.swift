@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct GridData: Decodable {
+struct GridData: Codable {
     let id: Int
     let createdAt: String
     let grid: [[TileData]]
@@ -50,7 +50,7 @@ struct GridView: View {
             if gridData.count > 0 {
                 LazyVGrid(columns: Array(repeating: GridItem(spacing: 0), count: 5), spacing: 0) {
                     ForEach(0..<25, id: \.self) { index in
-                        TileView(tileData: $gridData[index/5][index%5], selectedItem: $selectedItem, coins: $coins, gridSideLength:  gridSideLength)
+                        TileView(tileData: $gridData[index/5][index%5], selectedItem: $selectedItem, coins: $coins,gridSideLength:  gridSideLength, userId: $userId, gridData: $gridData)
                     }
                 }.rotation3DEffect(
                     .degrees(45),
