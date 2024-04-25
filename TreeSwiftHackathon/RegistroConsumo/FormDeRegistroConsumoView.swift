@@ -39,10 +39,10 @@ struct FormDeRegistroConsumoView: View {
     func imprimir(){
         
         print(registroTotalLuz)
-        historicData.append(BarData(value: registroTotalLuz, color: "#71C648"))
+        historicData.append(BarData(value: registroTotalLuz.rounded(), color: "#71C648"))
         mes = "Abril 2024"
-        mesMessagae = "\(87.1 - registroTotalLuz) KgCO2e debajo de tú promedio"
-        mesPasado = "\(registroTotalLuz) KgCO2e"
+        mesMessagae = "\((87.1 - registroTotalLuz.rounded()).rounded()) KgCO2e debajo de tú promedio"
+        mesPasado = "\(registroTotalLuz.rounded()) KgCO2e"
         offsetTotal = "15,3 KgCO2e"
         
         print(mes)
