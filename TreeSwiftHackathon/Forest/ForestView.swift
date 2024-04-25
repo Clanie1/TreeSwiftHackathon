@@ -84,12 +84,12 @@ struct ForestView: View {
                                 HStack(spacing: 14) {
                                     VStack(spacing: 6) {
                                         Text("Mes Pasado").foregroundColor(Color(hex: "#8E8E93")).font(.system(size: 15))
-                                        Text(mesPasadoValue).foregroundColor(Color(hex: "#71C648")).font(.system(size: 16)).bold()
+                                        Text(mesPasado).foregroundColor(Color(hex: "#71C648")).font(.system(size: 16)).bold()
                                     }
                                     Rectangle().fill(Color(hex: "#8E8E93")).frame(width: 1, height: 40)
                                     VStack(spacing: 6) {
                                         Text("Offset Total").foregroundColor(Color(hex: "#8E8E93")).font(.system(size: 15))
-                                        Text(offsetTotalValue).foregroundColor(Color(hex: "#71C648")).font(.system(size: 16)).bold()
+                                        Text(offsetTotal).foregroundColor(Color(hex: "#71C648")).font(.system(size: 16)).bold()
                                     }
                                 }
                                 .padding(.top, 10)
@@ -113,7 +113,7 @@ struct ForestView: View {
                                     
                                     VStack(alignment: .leading) {
                                         Text(mes).foregroundColor(.white).fontWeight(.bold).font(.headline)
-                                        Text(mesMessage).foregroundColor(Color(hex:"#71C648")).fontWeight(.bold).font(.subheadline)
+                                        Text(mesMessagae).foregroundColor(Color(hex:"#71C648")).fontWeight(.bold).font(.subheadline)
                                         
                                     }
                                     

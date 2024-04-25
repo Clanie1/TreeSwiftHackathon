@@ -51,12 +51,10 @@ struct Navigation: View {
     var body: some View {
         TabView(selection: $selectedTabindex) {
             FriendsView().tabItem {Label("Social", systemImage: "person")}
-            ForestView(historicData: historicData, mes: mes, mesMessage: mesMessagae, mesPasadoValue: mesPasado, offsetTotalValue: offsetTotal, coins: $coins).tabItem{Label("Mi Parque", systemImage: "house")}.background(Color(hex: "#87AFEC"))
+            ForestView(historicData: $historicData, mes: $mes, mesMessagae: $mesMessagae, mesPasado: $mesPasado, offsetTotal: $offsetTotal, coins: $coins).tabItem{Label("Mi Parque", systemImage: "house")}.background(Color(hex: "#87AFEC"))
             RegistroConsumoView(historicData: $historicData, mes: $mes, mesMessagae: $mesMessagae, mesPasado: $mesPasado, offsetTotal: $offsetTotal, coins: $coins).tabItem{
                 Label("Actividad", systemImage: "square.and.arrow.up")
             }
-            MapView().tabItem { Label("Mapa", systemImage: "map") }
-            
         }.onAppear() {
             UITabBar.appearance().backgroundColor = UIColor(Color(hex: "#1C1C1E"))
             selectedTabindex = 1
